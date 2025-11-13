@@ -1,0 +1,53 @@
+---
+title: "Github Conflict Demo"
+author: "Anna Duan"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+    theme: flatly
+    toc_float: yes
+    code_folding: hide
+    number_sections: no
+  pdf_document:
+    toc: yes
+---
+
+## Setup 
+
+
+First let's set up our chunk options and required libraries. This will minimize clutter and remove unnecessary messages and warnings. 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE,
+	cache = TRUE
+)
+
+library(tidyverse)
+library(ggplot2)
+library(sf)
+library(mapview)
+```
+
+## Load data
+Next we load our dataset from OpenDataPhilly.org. This dataset is a GeoJSON of all the parks in Philadelphia. We use sf::st_read() to read in spatial data like this.
+```{r load data, include = FALSE}
+parks <- st_read("https://opendata.arcgis.com/datasets/d52445160ab14380a673e5849203eb64_0.geojson")
+```
+
+## Preview data
+Let's preview our data. Using mapview::mapview(), we can quickly check what the data looks like. This is useful for when you are manipulating spatial data and need to check if things look right at each step.
+```{r preview data}
+mapview(parks, col.regions = "chartreuse3", map.types = "CartoDB.DarkMatter")
+```
+## Map the data
+Finally, let's map using ggplot2. Add your name as a subtitle in the labs() function. Also feel free to change the colors and other aesthetics. Once you're satisfied, save and commit. 
+```{r map data}
+ggplot() +
+  geom_sf(data = parks, fill = "chartreuse4", color = "transparent") +
+  labs(title = "Philadelphia Park System, 2023") + 
+  theme_void()
+```
