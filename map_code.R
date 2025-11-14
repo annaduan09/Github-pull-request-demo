@@ -52,7 +52,7 @@ ggplot() +
     plot.title = element_text(
       face = "bold",
       size = 23,
-      color = "lightgoldenrod1",
+      color = "#FFA400",
       margin = margin(b = 5),
       hjust = 0.5,
     ),
@@ -60,7 +60,7 @@ ggplot() +
     plot.subtitle = element_text(
       size = 14,
       hjust = 0,
-      color = "lightgoldenrod3",
+      color = "#DE8D00",
       margin = margin(b = 10)
     ),
     
