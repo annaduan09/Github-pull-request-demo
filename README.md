@@ -28,17 +28,17 @@ They will also get practice collaborating on repositories, including best practi
 # Part 2: Creating branches  
 ## Group 1 
 1. Open a branch, name it "fix-map-typos"
-2. Find and fix the typos in lines 36-39 of the ggplot2 map
+2. Find and fix the typos in lines 37-40 of the ggplot2 map
 3. Go to Github Desktop to **commit** and **push** your changes when satisfied.
 
 ## Group 2
 1. Open a branch from Group 1's repo, name it "adjust-theme-and-colors". 
-2. Change the map's theme in line 46 to theme_minimal() and feel free to modify the map text colors in lines 50, 55, and 63.
+2. Change the map's theme in line 46 to theme_void() and feel free to modify the map text colors in lines 51, 56, and 64.
 3. Go to Github Desktop to **commit** and **push** your changes when satisfied.
 
 ## Group 3
 1. Open a branch from Group 1's repo, name it "map-export-dimensions".
-2. Modify the ggsave command in line 77 to export the map without distorting or cropping the map. Feel free to play with the dimensions as well as aspect ratio to make the map most visually appealing. Also give the map a descriptive file name.
+2. Modify the ggsave command in line 79 to export the map without distorting or cropping the map. Feel free to play with the dimensions as well as aspect ratio to make the map most visually appealing. Also give the map a descriptive file name.
 3. When satisfied, export the map file to the repo.
 4. Go to Github Desktop to **commit** and **push** your changes (making sure to include the new jpeg file) when satisfied.
 
