@@ -5,15 +5,13 @@
 #### Imports ####
 library(tidyverse)
 library(conflicted)
-
-font_import()
-loadfonts(device = "pdf")
+library(sf)
 
 
 conflicted::conflict_prefer("filter", "dplyr")
 conflicted::conflict_prefer("select", "dplyr")
 #### Load data ####
-data_center_density <- st_read("data/data_center_density.geojson")
+data_centers_hex <- st_read("data/data_center_density.geojson")
 basemap <- st_read("data/basemap.geojson")
 
 #### Groups 1 and 2: Modify the map ####
@@ -53,7 +51,7 @@ ggplot() +
     plot.title = element_text(
       face = "bold",
       size = 23,
-      color = "lightgoldenrod1",
+      color = "#FFA400",
       margin = margin(b = 5),
       hjust = 0,
     ),
@@ -61,7 +59,7 @@ ggplot() +
     plot.subtitle = element_text(
       size = 14,
       hjust = 0,
-      color = "lightgoldenrod3",
+      color = "#DE8D00",
       margin = margin(b = 10)
     ),
     
