@@ -7,6 +7,7 @@ library(tidyverse)
 library(conflicted)
 library(sf)
 
+
 conflicted::conflict_prefer("filter", "dplyr")
 conflicted::conflict_prefer("select", "dplyr")
 #### Load data ####
@@ -74,4 +75,4 @@ ggplot() +
   )
 
 #### Group 3: Save the map #### 
-ggsave("map.jpeg", width = 20, height = 20, units = "cm")
+ggsave("map.jpeg", width = 33, height = 20, units = "cm")
