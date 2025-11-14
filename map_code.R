@@ -5,15 +5,13 @@
 #### Imports ####
 library(tidyverse)
 library(conflicted)
-
-font_import()
-loadfonts(device = "pdf")
+library(sf)
 
 
 conflicted::conflict_prefer("filter", "dplyr")
 conflicted::conflict_prefer("select", "dplyr")
 #### Load data ####
-data_center_density <- st_read("data/data_center_density.geojson")
+data_centers_hex <- st_read("data/data_center_density.geojson")
 basemap <- st_read("data/basemap.geojson")
 
 #### Groups 1 and 2: Modify the map ####
@@ -76,4 +74,4 @@ ggplot() +
   )
 
 #### Group 3: Save the map #### 
-ggsave("map.jpeg", width = 20, height = 20, units = "cm")
+ggsave("map.jpeg", width = 33, height = 20, units = "cm")
