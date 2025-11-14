@@ -33,7 +33,7 @@ ggplot() +
   geom_sf(data = data_centers_hex, color = "gray10", size = 0.5) +
   geom_sf(data = basemap, fill = NA, color = "gray20") +
   labs(
-    title = "A quarter of global internet traffic passes through Northern Virginia",
+    title = "A quarter of global internet traffic passes through Virginia's Data Center Alley",
     subtitle = "Data Center Alley in Northern Virginia has the densest concentration of data centers in the world, with 300+ data centers and 4900 megawatts in energy capacity.",
     caption = "Source: OpenStreetMap Contributors\nAuthor: Anna Duan and Penn Urban Tech Club",
     fill = "Data center density\n(centers per 500sqmi)"
@@ -50,11 +50,10 @@ ggplot() +
     legend.position = c(0.1, 0.2),
     plot.background = element_rect(fill = "black"),
     
-    text = element_text(color = "goldenrod1", family = "Sans"),
+    text = element_text(color = "goldenrod1", family = "Satoshi"),
     
     plot.title.position = "plot",
     plot.title = element_text(
-      family = "Satoshi",
       face = "bold",
       size = 18,
       color = "goldenrod1",
@@ -62,7 +61,6 @@ ggplot() +
     ),
     
     plot.subtitle = element_text(
-      family = "Satoshi",
       size = 14,
       color = "goldenrod2",
       margin = margin(b = 10)
@@ -70,10 +68,9 @@ ggplot() +
     
     plot.caption.position = "plot",
     plot.caption = element_text(
-      family = "Satoshi",
       size = 9,
       hjust = 0.5,
-      color = "goldenrod3",
+      color = "orchid3",
       margin = margin(t = 10)
     ),
     
