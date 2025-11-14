@@ -32,10 +32,11 @@ ggplot() +
   geom_text(aes(label = str_wrap("Data Center Alley, Northern Virginia", 38), x = 3479603, y = 400000), size = 4, color = "lightgoldenrod1", family = "Satoshi", fontface = "bold", hjust = 1, vjust = 1) +
   geom_text(aes(label = str_wrap("Data Center Alley in Northern Virginia has the densest concentration of data centers in the world, with 300+ data centers and 4900 megawatts in energy capacity. Location just outside of Washington, D.C., this area handles, by most estimates, 22-30% of the world's internet traffic.  ", 50), x = 3479603, y = 250000), size = 3, color = "lightgoldenrod3", family = "Satoshi", hjust = 1, vjust = 1) +
   labs(
-    title = "A qurter of global internet traffic passes through Virginia's Data Center Alley",
-    subtitle = "Data centers per 1000 square-mile hexogon grids as of November 2025, log-transformed",
+    title = "A quarter of global internet traffic passes through Virginia's Data Center Alley", hjust = 0.5,
+    subtitle = "Data centers per 1000 square-mile hexagon grids as of November 2025, log-transformed", hjust = 0.5,
     caption = "#30DayMapChallenge Day 14: OpenStreetMap | Source: OpenSreetMap Contributors, 2025 | Anna Duan X Penn Urban Tech Club",
-    fill = "Data center density\n(Log Cnters/100sqmi)"
+    fill = "Data center density\n(Log Centers/100sqmeters)",
+    
   ) +
   scale_fill_viridis_c(
     option = "A",
@@ -53,7 +54,7 @@ ggplot() +
       size = 23,
       color = "lightgoldenrod1",
       margin = margin(b = 5),
-      hjust = 0,
+      hjust = 0.5,
     ),
     
     plot.subtitle = element_text(
