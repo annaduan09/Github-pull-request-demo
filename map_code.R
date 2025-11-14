@@ -22,10 +22,10 @@ ggplot() +
   geom_sf(
     data = data_centers_hex %>% filter(centers > 0),
     aes(fill = centers/10),
-    color = "gray10"
+    color = "gray12"
   ) +
-  geom_sf(data = data_centers_hex, color = "gray10", size = 0.5) +
-  geom_sf(data = basemap, fill = "transparent", color = "gray20") +
+  geom_sf(data = data_centers_hex, color = "gray12", size = 0.5) +
+  geom_sf(data = basemap, fill = "transparent", color = "gray22") +
   geom_polygon(aes(x,y),
                data = {h<-sqrt(10000)*1609.344/2; cx<-1581937; cy<-315796.5;
                data.frame(x=c(cx-h,cx+h,cx+h,cx-h),
@@ -44,7 +44,7 @@ ggplot() +
     trans = "log",
     labels = scales::label_number()
   ) +
-  theme_minimal() +
+  theme_void() +
   theme(
     legend.position = c(0.1, 0.3),
     plot.background = element_rect(fill = "black"),
@@ -52,7 +52,7 @@ ggplot() +
     plot.title.position = "plot",
     plot.title = element_text(
       face = "bold",
-      size = 21,
+      size = 23,
       color = "lightgoldenrod1",
       margin = margin(b = 5),
       hjust = 0,
